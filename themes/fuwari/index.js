@@ -149,7 +149,7 @@ const LayoutSlug = props => {
             <ArticleHeroCover coverSrc={articleCoverSrc} title={post.title} />
           ) : null}
           <ArticleHeader post={post} />
-          <div id='article-wrapper' className='fuwari-prose'>
+          <div id='article-wrapper' className={post.fullWidth ? 'fuwari-prose reading-mode' : 'fuwari-prose'}>
             <NotionPage post={post} />
             {siteConfig('FUWARI_ARTICLE_SHARE', true, CONFIG) && <ShareBar post={post} />}
           </div>
